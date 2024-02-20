@@ -766,10 +766,17 @@ void main() {
         throwsToolExit(),
       );
 
+<<<<<<< HEAD
       expect(logger.errorText, contains("Use of undeclared identifier 'asdas'"));
       expect(logger.errorText, contains('/Users/m/Projects/test_create/ios/Runner/AppDelegate.m:7:56'));
       expect(logger.statusText, isNot(contains("Xcode's output")));
       expect(logger.statusText, isNot(contains('Lots of spew from Xcode')));
+=======
+      expect(testLogger.errorText, contains("Use of undeclared identifier 'asdas'"));
+      expect(testLogger.errorText, contains('/Users/m/Projects/test_create/ios/Runner/AppDelegate.m:7:56'));
+      expect(testLogger.errorText, isNot(contains('Command PhaseScriptExecution failed with a nonzero exit code')));
+      expect(testLogger.warningText, isNot(contains('but the range of supported deployment target versions is')));
+>>>>>>> 86c2cc7a593212861d4624d1bbfa555f70b31937
     }, overrides: <Type, Generator>{
       FileSystem: () => fileSystem,
       Logger: () => logger,
@@ -1334,7 +1341,24 @@ Runner requires a provisioning profile. Select a provisioning profile in the Sig
         osUtils: FakeOperatingSystemUtils(),
       );
 
+<<<<<<< HEAD
       processManager.addCommands(<FakeCommand>[
+=======
+      createMinimalMockProjectFiles();
+
+      await expectLater(
+        createTestCommandRunner(command).run(const <String>['build', 'ios', '--simulator', '--no-pub']),
+        throwsToolExit(),
+      );
+
+      expect(testLogger.errorText, contains("Use of undeclared identifier 'asdas'"));
+      expect(testLogger.errorText, contains('/Users/m/Projects/test_create/ios/Runner/AppDelegate.m:7:56'));
+      expect(testLogger.errorText, isNot(contains('Command PhaseScriptExecution failed with a nonzero exit code')));
+      expect(testLogger.warningText, isNot(contains('but the range of supported deployment target versions is')));
+    }, overrides: <Type, Generator>{
+      FileSystem: () => fileSystem,
+      ProcessManager: () => FakeProcessManager.list(<FakeCommand>[
+>>>>>>> 86c2cc7a593212861d4624d1bbfa555f70b31937
         xattrCommand,
         setUpFakeXcodeBuildHandler(
           simulator: true,

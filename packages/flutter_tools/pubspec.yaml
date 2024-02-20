@@ -15,11 +15,15 @@ dependencies:
   browser_launcher: 1.1.1
 <<<<<<< HEAD
   dds: 2.9.5
+<<<<<<< HEAD
   dwds: 21.0.0
 =======
   dds: 3.1.0+1
   dwds: 23.0.0+1
 >>>>>>> bae5e49bc2a867403c43b2aae2de8f8c33b037e4
+=======
+  dwds: 21.0.0+1
+>>>>>>> 86c2cc7a593212861d4624d1bbfa555f70b31937
   completion: 1.0.1
   coverage: 1.7.2
   crypto: 3.0.3
@@ -124,7 +128,11 @@ dartdoc:
   nodoc: true
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 # PUBSPEC CHECKSUM: 537c
 =======
 # PUBSPEC CHECKSUM: 45be
 >>>>>>> bae5e49bc2a867403c43b2aae2de8f8c33b037e4
+=======
+# PUBSPEC CHECKSUM: e7e1
+>>>>>>> 86c2cc7a593212861d4624d1bbfa555f70b31937

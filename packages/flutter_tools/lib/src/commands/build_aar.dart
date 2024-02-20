@@ -81,7 +81,12 @@ class BuildAarCommand extends BuildSubCommand {
 
   @override
   Future<CustomDimensions> get usageValues async {
+<<<<<<< HEAD
     final String projectType;
+=======
+
+    String projectType;
+>>>>>>> 86c2cc7a593212861d4624d1bbfa555f70b31937
     if (project.manifest.isModule) {
       projectType = 'module';
     } else if (project.manifest.isPlugin) {
